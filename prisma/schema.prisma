@@ -1,0 +1,303 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum ProductStatus {
+  Active
+  Seasonal
+  OutOfSeason
+}
+
+enum QuoteType {
+  Import
+  Export
+}
+
+enum QuoteStatus {
+  New
+  Pending
+  Closed
+}
+
+enum SupplierStatus {
+  New
+  Reviewed
+  Approved
+  Rejected
+}
+
+enum ContactStatus {
+  New
+  Read
+  Replied
+  Closed
+}
+
+enum ProductScope {
+  MixFruits
+  DryItems
+  Custom
+}
+
+enum PostStatus {
+  Draft
+  Published
+  Scheduled
+}
+
+enum SectionType {
+  Banner
+  TextBlock
+  ProductGrid
+  Testimonial
+  CTA
+}
+
+enum UserRole {
+  SuperAdmin
+  Editor
+  SEOManager
+  Sales
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  bannerImage String?
+  seoTitle    String?
+  seoMeta     String?
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  products                 Product[]
+  exportDestinationProducts ExportDestinationProduct[]
+}
+
+model Product {
+  id            String        @id @default(cuid())
+  name          String
+  slug          String        @unique
+  categoryId    String
+  description   String?       // rich text
+  variety       String?
+  sizeGrade     String?
+  packingType   String?
+  shelfLife     String?
+  seasonStart   String?
+  seasonEnd     String?
+  status        ProductStatus @default(Active)
+  seoTitle      String?
+  seoMeta       String?
+  focusKeyword  String?
+  schemaEnabled Boolean       @default(true)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  category                Category                   @relation(fields: [categoryId], references: [id])
+  images                  ProductImage[]
+  sourceCountries         ProductSourceCountry[]
+  exportDestinationProducts ExportDestinationProduct[]
+}
+
+model ProductImage {
+  id        String   @id @default(cuid())
+  productId String
+  url       String
+  altText   String?
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+}
+
+model SourceCountry {
+  id                 String   @id @default(cuid())
+  name               String
+  slug               String   @unique
+  region             String?
+  flagIcon           String?
+  description        String?
+  harvestSeasonInfo  String?
+  certifications     String?
+  seoTitle           String?
+  seoMeta            String?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  products ProductSourceCountry[]
+}
+
+model ProductSourceCountry {
+  productId       String
+  sourceCountryId String
+
+  product       Product       @relation(fields: [productId], references: [id], onDelete: Cascade)
+  sourceCountry SourceCountry @relation(fields: [sourceCountryId], references: [id], onDelete: Cascade)
+
+  @@id([productId, sourceCountryId])
+}
+
+model ExportDestination {
+  id                 String       @id @default(cuid())
+  name               String
+  slug               String       @unique
+  region             String?
+  productScope       ProductScope @default(MixFruits)
+  portLogisticsNotes String?
+  seoTitle           String?
+  seoMeta            String?
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+
+  products ExportDestinationProduct[]
+}
+
+model ExportDestinationProduct {
+  id                  String  @id @default(cuid())
+  exportDestinationId String
+  categoryId          String?
+  productId           String?
+
+  exportDestination ExportDestination @relation(fields: [exportDestinationId], references: [id], onDelete: Cascade)
+  category          Category?         @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  product           Product?          @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([exportDestinationId, categoryId, productId])
+}
+
+model BlogPost {
+  id            String     @id @default(cuid())
+  title         String
+  slug          String     @unique
+  content       String?    // rich text
+  excerpt       String?
+  featuredImage String?
+  categoryId    String?
+  authorId      String
+  status        PostStatus @default(Draft)
+  publishAt     DateTime?
+  seoTitle      String?
+  seoMeta       String?
+  focusKeyword  String?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  category BlogCategory? @relation(fields: [categoryId], references: [id])
+  author   User          @relation(fields: [authorId], references: [id])
+}
+
+model BlogCategory {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  posts BlogPost[]
+}
+
+model QuoteRequest {
+  id                   String      @id @default(cuid())
+  type                 QuoteType
+  productId            String?
+  categoryId           String?
+  destinationCountryId String?
+  quantity             String?
+  unit                 String?
+  buyerName            String
+  buyerEmail           String
+  buyerPhone           String?
+  buyerCountry         String?
+  message              String?
+  status               QuoteStatus @default(New)
+  createdAt            DateTime    @default(now())
+  updatedAt            DateTime    @updatedAt
+}
+
+model SupplierApplication {
+  id              String         @id @default(cuid())
+  companyName     String
+  contactName     String
+  email           String
+  phone           String?
+  productsOffered String?
+  country         String?
+  message         String?
+  status          SupplierStatus @default(New)
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+}
+
+model ContactMessage {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  subject   String?
+  message   String
+  status    ContactStatus @default(New)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model StaticPage {
+  id       String   @id @default(cuid())
+  slug     String   @unique
+  title    String
+  sections Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id               String   @id @default(cuid())
+  name             String
+  email            String   @unique
+  passwordHash     String
+  role             UserRole @default(Editor)
+  twoFactorEnabled Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  posts       BlogPost[]
+  activityLogs ActivityLog[]
+}
+
+model ActivityLog {
+  id         String   @id @default(cuid())
+  userId     String
+  action     String
+  entityType String
+  entityId   String
+  timestamp  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model SiteSetting {
+  key       String   @id
+  value     String   // Json or string
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model RedirectRule {
+  id         String   @id @default(cuid())
+  fromPath   String   @unique
+  toPath     String
+  statusCode Int      @default(301)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
