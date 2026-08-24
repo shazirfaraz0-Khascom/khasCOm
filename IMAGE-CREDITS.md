@@ -32,10 +32,10 @@ and is recommended regardless — see `REBRAND-NOTES.md`.
 
 | File | Notes |
 |---|---|
-| `public/logo.webp` | Supplied by the client. The source of everything below. |
-| `logo-wordmark.webp` | The client logo cropped to its artwork — the original was 85% blank margin. |
-| `logo-mark.webp` | The CK monogram on its own, lifted from the same file. |
-| `app/favicon.ico` | The monogram, multi-resolution. Must stay RGBA or the build fails. |
+| `public/logo.webp` | Supplied by the client, background already removed. The source of everything below. |
+| `logo-wordmark.webp` | The client logo cropped to its artwork. Transparent, lossless WebP — the navbar goes translucent on scroll, so it must composite rather than sit on a plate. |
+| `logo-mark.webp` | The CK monogram on its own, lifted from the same file. Transparent. |
+| `app/favicon.ico` | The monogram on white so it stays legible in a dark browser chrome. Must stay RGBA or the build fails. |
 | `og-image.jpg` | 1200x630 social share card built around the client logo. |
 | `pink-salt-fine.webp` | Crop of the pre-existing `pink-salt-real.webp` asset. |
 | `pink-salt-banner.webp` | Wide crop of the same, used as the Himalayan Salt page banner. |
