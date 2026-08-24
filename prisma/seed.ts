@@ -47,16 +47,55 @@ async function main() {
   }
 
   // 2. Categories
+  // `order` drives the homepage, which shows the first six. bannerImage and
+  // description must be set: the homepage renders straight from these columns,
+  // and a null bannerImage leaves the category card with no image at all.
   const categories = [
-    { name: 'Fresh Fruits', slug: 'fresh-fruits' },
-    { name: 'Fresh Vegetables', slug: 'fresh-vegetables' },
-    { name: 'Himalayan Pink Salt', slug: 'himalayan-salt' },
-    { name: 'Dates', slug: 'dates' },
-    { name: 'Sesame Seeds & Oilseeds', slug: 'seeds-oilseeds' },
-    { name: 'Dry Fruits & Nuts', slug: 'dry-fruits' },
-    { name: 'Spices & Aromatics', slug: 'spices-aromatics' },
-    { name: 'Grains & Staples', slug: 'grains' },
-    { name: 'Poultry / Eggs', slug: 'poultry' },
+    {
+      name: 'Fresh Fruits', slug: 'fresh-fruits', order: 1,
+      description: 'Chaunsa mangoes, Valencia oranges and seasonal Pakistani fruit.',
+      bannerImage: '/images/unsplash-1611080626919-7cf5a9dbab5b.webp',
+    },
+    {
+      name: 'Fresh Vegetables', slug: 'fresh-vegetables', order: 2,
+      description: 'Tinda, loki, arvi, onions and potatoes, packed for reefer export.',
+      bannerImage: '/images/tinda-apple-gourd.webp',
+    },
+    {
+      name: 'Himalayan Pink Salt', slug: 'himalayan-salt', order: 3,
+      description: 'Hand-mined pink rock salt from the Khewra range in Punjab.',
+      bannerImage: '/images/pink-salt-real.webp',
+    },
+    {
+      name: 'Dates', slug: 'dates', order: 4,
+      description: 'Aseel, Ajwa and dry dates from the Khairpur and Sindh belts.',
+      bannerImage: '/images/dates-aseel.webp',
+    },
+    {
+      name: 'Sesame Seeds & Oilseeds', slug: 'seeds-oilseeds', order: 5,
+      description: 'Natural, hulled and black sesame seeds, sortex cleaned to spec.',
+      bannerImage: '/images/sesame-seeds-white.webp',
+    },
+    {
+      name: 'Dry Fruits & Nuts', slug: 'dry-fruits', order: 6,
+      description: 'Almonds, walnuts and apricots from the northern orchards.',
+      bannerImage: '/images/unsplash-1508061253366-f7da158b6d46.webp',
+    },
+    {
+      name: 'Grains & Staples', slug: 'grains', order: 7,
+      description: '1121 basmati rice, wheat and daily staples in bulk.',
+      bannerImage: '/images/unsplash-1586201375761-83865001e31c.webp',
+    },
+    {
+      name: 'Spices & Aromatics', slug: 'spices-aromatics', order: 8,
+      description: 'Garlic, ginger and aromatics sourced for international kitchens.',
+      bannerImage: '/images/unsplash-1596040033229-a9821ebd058d.webp',
+    },
+    {
+      name: 'Poultry / Eggs', slug: 'poultry', order: 9,
+      description: 'Halal-certified fresh and frozen poultry under strict cold chain.',
+      bannerImage: '/images/unsplash-1604503468506-a8da13d82791.webp',
+    },
   ]
   const createdCategories: any = {}
   for (const cat of categories) {

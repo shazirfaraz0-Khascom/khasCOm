@@ -321,7 +321,7 @@ function CategoriesSection({ categories }: { categories: { id: string; slug: str
               className="group relative rounded-3xl overflow-hidden aspect-[4/5] cursor-pointer"
             >
               <Image 
-                src={cat.image || `/images/unsplash-${i % 2 === 0 ? '1610832958506-aa56368176cf' : '1550989460-0adf9ea622e2'}.jpg`}
+                src={cat.image || `/images/unsplash-${i % 2 === 0 ? '1610832958506-aa56368176cf' : '1550989460-0adf9ea622e2'}.webp`}
                 alt={cat.name} 
                 fill sizes="(max-width: 768px) 100vw, 50vw" 
                 className="object-cover transition-transform duration-1000 group-hover:scale-110" 
