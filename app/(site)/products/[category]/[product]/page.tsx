@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight, ShieldCheck, Ship, Clock, CheckCircle2, FileText, Anchor, ArrowRight, PackageOpen, Factory, Globe } from "lucide-react";
-import { constructMetadata } from "@/lib/seo";
+import { constructMetadata, SITE_NAME, SITE_URL } from "@/lib/seo";
 import { CATEGORY_DATA } from "../page"; // Importing the shared mock data
 
 type CategoryKey = keyof typeof CATEGORY_DATA;
@@ -32,8 +32,15 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   if (!product) return constructMetadata({ title: 'Product Not Found' });
 
   return constructMetadata({
-    title: `${product.name} Wholesale Export | KhasCom`,
-    description: `Premium ${product.name} from ${product.origin}. Global export and wholesale supply.`,
+    title: `${product.name} Wholesale Export`,
+    description: `Export-grade ${product.name} from ${product.origin}, supplied in bulk by KhasCom. Minimum order ${product.minOrder}. Worldwide shipping with full export documentation.`,
+    path: `/products/${resolvedParams.category}/${product.slug}`,
+    image: product.img,
+    keywords: [
+      `${product.name} exporter`,
+      `${product.name} wholesale Pakistan`,
+      `buy ${product.name} in bulk`,
+    ],
   });
 }
 
@@ -49,8 +56,45 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   const relatedProducts = categoryData.products.filter(p => p.id !== product.id).slice(0, 3);
 
+  // Product and breadcrumb markup, so a search result can show the origin,
+  // category and minimum order rather than a bare blue link.
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Product',
+        name: product.name,
+        image: `${SITE_URL}${product.img}`,
+        description: `Export-grade ${product.name} from ${product.origin}, supplied in bulk by KhasCom. Minimum order ${product.minOrder}.`,
+        category: categoryData.name,
+        countryOfOrigin: product.origin,
+        brand: { '@type': 'Brand', name: SITE_NAME },
+        offers: {
+          '@type': 'Offer',
+          availability: 'https://schema.org/InStock',
+          seller: { '@id': `${SITE_URL}/#organization` },
+          url: `${SITE_URL}/products/${categoryId}/${product.slug}`,
+          eligibleQuantity: {
+            '@type': 'QuantitativeValue',
+            description: product.minOrder,
+          },
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+          { '@type': 'ListItem', position: 2, name: 'Products', item: `${SITE_URL}/products` },
+          { '@type': 'ListItem', position: 3, name: categoryData.name, item: `${SITE_URL}/products/${categoryId}` },
+          { '@type': 'ListItem', position: 4, name: product.name },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-[#F8FAF8] overflow-x-hidden selection:bg-[#14532D] selection:text-white pb-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* 1. Premium Homepage-Style Hero */}
       <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-[#0A1A11]">
         <div className="absolute inset-0 z-0">

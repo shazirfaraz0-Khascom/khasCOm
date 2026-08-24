@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
     });
     if (country) {
       return constructMetadata({
-        title: country.seoTitle || `Products from ${country.name} | KhasCom`,
+        title: country.seoTitle || `Products from ${country.name}`,
         description: country.seoMeta || `Explore premium agricultural products sourced from verified farms in ${country.name}.`,
       });
     }

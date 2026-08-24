@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ destinati
     });
     if (dest) {
       return constructMetadata({
-        title: dest.seoTitle || `Export to ${dest.name} | Wholesale Supply | KhasCom`,
+        title: dest.seoTitle || `Export to ${dest.name} | Wholesale Supply`,
         description: dest.seoMeta || `Wholesale export of premium fresh fruits and vegetables to ${dest.name}. Contact us for bulk export quotes and logistics information.`,
       });
     }

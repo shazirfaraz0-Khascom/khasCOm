@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     
     if (page) {
       return constructMetadata({
-        title: `${page.title} | KhasCom`,
+        title: `${page.title}`,
       });
     }
   } catch (e) {

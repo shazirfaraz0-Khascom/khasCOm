@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     });
     if (category) {
       return constructMetadata({
-        title: category.seoTitle || `${category.name} Wholesale Import | KhasCom`,
+        title: category.seoTitle || `${category.name} Wholesale Import`,
         description: category.seoMeta || `Explore our premium ${category.name} sourced directly from verified global farms for international trade.`,
       });
     }

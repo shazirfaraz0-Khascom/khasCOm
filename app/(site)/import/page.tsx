@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { constructMetadata } from '@/lib/seo';
 
 export const metadata = constructMetadata({
-  title: 'Import Sourcing Hub | KhasCom',
+  title: 'Import Sourcing Hub',
+  path: '/import',
   description: 'Explore our global import sourcing hubs for premium fresh fruits, vegetables, nuts, and spices.',
 });
 

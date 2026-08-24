@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { constructMetadata } from '@/lib/seo';
 
 export const metadata = constructMetadata({
-  title: 'Blog & Market Insights | KhasCom',
+  title: 'Blog & Market Insights',
+  path: '/blog',
   description: 'Latest news, market insights, and updates from the global agricultural trade industry.',
 });
 

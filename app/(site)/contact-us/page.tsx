@@ -3,7 +3,8 @@ import { constructMetadata } from '@/lib/seo';
 import { ContactForm } from './ContactForm';
 
 export const metadata = constructMetadata({
-  title: 'Contact Us | KhasCom',
+  title: 'Contact Us',
+  path: '/contact-us',
   description: 'Get in touch with KhasCom for wholesale inquiries, support, or partnership opportunities.',
 });
 

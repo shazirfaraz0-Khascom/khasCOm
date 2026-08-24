@@ -3,7 +3,8 @@ import { prisma } from '@/lib/prisma';
 import HomeClient from '@/components/home/HomeClient';
 
 export const metadata = constructMetadata({
-  title: 'KhasCom | Pakistani Commodities Export & Import Group',
+  title: 'Pakistani Commodities Export & Import Group',
+  path: '/',
   description: "Pakistan's commodities export and import group \u2014 fresh fruits and vegetables, Himalayan pink salt, dates, sesame seeds, rice and grains for international wholesale buyers.",
 });
 

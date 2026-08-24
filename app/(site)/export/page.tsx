@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { constructMetadata } from '@/lib/seo';
 
 export const metadata = constructMetadata({
-  title: 'Export Markets | KhasCom',
+  title: 'Export Markets',
+  path: '/export',
   description: 'Explore our export destinations and wholesale distribution networks globally.',
 });
 

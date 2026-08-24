@@ -4,7 +4,8 @@ import { Building2, Users, PackageCheck, ArrowRight, CheckCircle2 } from 'lucide
 import { ServicesBanner } from '@/components/services/ServicesBanner';
 
 export const metadata = constructMetadata({
-  title: 'Our Services | KhasCom',
+  title: 'Our Services',
+  path: '/services',
   description: 'Professional export services, documentation, sourcing and buyer matchmaking by KhasCom, Pakistan.',
 });
 

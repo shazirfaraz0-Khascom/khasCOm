@@ -154,8 +154,11 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   }
 
   return constructMetadata({
-    title: `${data.name} | Premium Export | KhasCom`,
+    title: `${data.name} | Premium Export`,
     description: data.description,
+    path: `/products/${categoryId}`,
+    image: data.image,
+    keywords: [`${data.name} exporter Pakistan`, `wholesale ${data.name.toLowerCase()}`],
   });
 }
 

@@ -70,24 +70,21 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 z-50 group">
-          <div className={`relative w-12 h-12 lg:w-14 lg:h-14 overflow-hidden rounded-full shadow-md transition-transform duration-300 group-hover:scale-105 border-2 bg-[#C8A14A]/10 ${headerTransparent ? "border-white/20" : "border-[#14532D]/10"}`}>
-            <Image 
-              src="/images/logo.png" 
-              alt="KhasCom Logo" 
-              fill 
+        <Link href="/" aria-label="KhasCom home" className="flex items-center z-50 group">
+          <span
+            className={`block rounded-lg transition-all duration-300 group-hover:scale-[1.03] ${
+              headerTransparent ? "bg-white px-3 py-2 shadow-lg" : "px-0 py-0"
+            }`}
+          >
+            <Image
+              src="/images/logo-wordmark.webp"
+              alt="KhasCom"
+              width={900}
+              height={224}
               priority
-              sizes="(max-width: 768px) 3rem, 3.5rem"
-              className="object-contain" 
+              sizes="(max-width: 1024px) 150px, 190px"
+              className="h-8 lg:h-10 w-auto"
             />
-          </div>
-          <span className="flex flex-col leading-none">
-            <span className={`font-serif text-xl lg:text-2xl font-bold tracking-tight transition-colors duration-300 ${headerTransparent ? "text-white" : "text-[#14532D]"}`}>
-              KhasCom
-            </span>
-            <span className="text-[9px] lg:text-[10px] uppercase tracking-[0.22em] font-semibold text-[#C8A14A] mt-1">
-              Commodities Group
-            </span>
           </span>
         </Link>
 

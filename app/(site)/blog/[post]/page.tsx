@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ post: str
     });
     if (post) {
       return constructMetadata({
-        title: post.seoTitle || `${post.title} | KhasCom Blog`,
+        title: post.seoTitle || `${post.title}`,
         description: post.seoMeta || post.excerpt || `Read ${post.title} on KhasCom blog.`,
       });
     }

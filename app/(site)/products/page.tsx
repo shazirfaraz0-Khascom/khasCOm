@@ -3,8 +3,9 @@ import { constructMetadata } from "@/lib/seo";
 import { CATEGORY_DATA } from "./[category]/page";
 
 export const metadata = constructMetadata({
-  title: 'Our Products | Wholesale Export | KhasCom',
-  description: 'Explore our premium range of fresh fruits, vegetables, dry fruits, grains, and poultry products ready for global export.',
+  title: 'Our Products | Wholesale Export',
+  path: '/products',
+  description: 'Browse the full KhasCom export catalogue — fresh vegetables including tinda, loki and arvi, Himalayan pink salt, Aseel and Ajwa dates, sesame seeds, basmati rice, dry fruits and poultry.',
 });
 
 import ProductsClient from "./ProductsClient";

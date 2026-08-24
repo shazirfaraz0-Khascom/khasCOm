@@ -86,12 +86,12 @@ function HeroSection() {
       <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
         <Image
           src="/images/unsplash-1542838132-92c53300491e.webp"
-          alt="Premium organic export"
+          alt="KhasCom export-grade Pakistani produce prepared for international shipment"
           fill
           priority
-          className="object-cover opacity-60"
+          className="object-cover opacity-95"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1A11]/90 via-[#0A1A11]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1A11]/70 via-[#0A1A11]/25 to-transparent" />
       </motion.div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 grid lg:grid-cols-2 gap-12 pt-20">

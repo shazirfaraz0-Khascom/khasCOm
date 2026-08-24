@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { constructMetadata } from '@/lib/seo';
 
 export const metadata = constructMetadata({
-  title: 'Source Countries | KhasCom',
+  title: 'Source Countries',
   description: 'Explore our global network of source countries for premium agricultural products.',
 });
 
