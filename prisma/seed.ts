@@ -59,7 +59,7 @@ async function main() {
     {
       name: 'Fresh Vegetables', slug: 'fresh-vegetables', order: 2,
       description: 'Tinda, loki, arvi, onions and potatoes, packed for reefer export.',
-      bannerImage: '/images/tinda-apple-gourd.webp',
+      bannerImage: '/images/unsplash-1464226184884-fa280b87c399.webp',
     },
     {
       name: 'Himalayan Pink Salt', slug: 'himalayan-salt', order: 3,

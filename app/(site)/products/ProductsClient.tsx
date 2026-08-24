@@ -28,8 +28,8 @@ export default function ProductsClient({ categories }: { categories: any[] }) {
       <section ref={ref} className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-[#0A1A11]">
         <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
           <Image
-            src="/images/unsplash-1542838132-92c53300491e.webp"
-            alt="Premium Products Export"
+            src="/images/unsplash-1610832958506-aa56368176cf.webp"
+            alt="The full KhasCom range of export-grade Pakistani commodities"
             fill
             priority
             className="object-cover opacity-50 mix-blend-luminosity"

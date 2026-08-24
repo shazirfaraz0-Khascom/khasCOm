@@ -85,8 +85,8 @@ function HeroSection() {
     <section ref={ref} className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-[#0A1A11]">
       <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
         <Image
-          src="/images/unsplash-1542838132-92c53300491e.webp"
-          alt="KhasCom export-grade Pakistani produce prepared for international shipment"
+          src="/images/unsplash-1578575437130-527eed3abbec.webp"
+          alt="Container vessel loading KhasCom commodity shipments for international export"
           fill
           priority
           className="object-cover opacity-95"
@@ -137,7 +137,7 @@ function HeroSection() {
             className="absolute top-[10%] left-[10%] w-48 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-4 shadow-2xl"
           >
             <div className="relative h-32 w-full rounded-xl overflow-hidden mb-3">
-              <Image src="/images/unsplash-1550258987-190a2d41a8ba.webp" alt="Orange" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+              <Image src="/images/unsplash-1611080626919-7cf5a9dbab5b.webp" alt="Premium Pakistani citrus" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
             </div>
             <div className="text-white font-serif font-medium">Premium Citrus</div>
             <div className="text-gray-400 text-xs mt-1">Kinnow &amp; Valencia</div>

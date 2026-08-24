@@ -10,7 +10,7 @@ export const CATEGORY_DATA = {
   "fresh-fruits": {
     name: "Fresh Fruits",
     description: "Premium seasonal and exotic Pakistani fruits, hand-picked and pre-cooled for global export.",
-    image: "/images/unsplash-1542838132-92c53300491e.webp",
+    image: "/images/unsplash-1611080626919-7cf5a9dbab5b.webp",
     stats: [
       { n: "12+", l: "Varieties" },
       { n: "100%", l: "Farm Sourced" },
@@ -26,7 +26,7 @@ export const CATEGORY_DATA = {
   "fresh-vegetables": {
     name: "Fresh Vegetables",
     description: "Farm-fresh Pakistani vegetables \u2014 including tinda, loki and arvi \u2014 sorted and packed under strict quality controls.",
-    image: "/images/tinda-apple-gourd.webp",
+    image: "/images/unsplash-1464226184884-fa280b87c399.webp",
     stats: [
       { n: "20+", l: "Types" },
       { n: "100%", l: "Hand Sorted" },
@@ -44,7 +44,7 @@ export const CATEGORY_DATA = {
   "himalayan-salt": {
     name: "Himalayan Pink Salt",
     description: "Hand-mined pink rock salt from the Khewra range in Punjab, supplied in food, industrial and d\u00e9cor grades.",
-    image: "/images/khewra-salt-mine.webp",
+    image: "/images/pink-salt-banner.webp",
     stats: [
       { n: "84+", l: "Trace Minerals" },
       { n: "0%", l: "Additives" },

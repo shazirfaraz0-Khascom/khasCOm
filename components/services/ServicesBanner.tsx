@@ -23,7 +23,7 @@ export function ServicesBanner() {
     <section className="relative min-h-[90svh] flex items-center justify-center overflow-hidden bg-[#0A1A11]">
       <motion.div className="absolute inset-0 z-0">
         <Image
-          src="/images/unsplash-1578575437130-527eed3abbec.webp"
+          src="/images/unsplash-1494412574643-ff11b0a5c1c3.webp"
           alt="Professional Business Services"
           fill
           priority

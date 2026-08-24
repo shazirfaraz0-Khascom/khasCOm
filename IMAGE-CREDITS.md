@@ -14,7 +14,6 @@ CC BY-SA and **must be credited** if they stay on the live site — the rows are
 | `arvi-taro-root.webp` | Arvi (Taro Root) | CC0 | [Arvi.JPG](https://commons.wikimedia.org/wiki/File:Arvi.JPG) — Miansari66 |
 | `dates-aseel.webp` | Aseel Dates (Khairpur) | Public domain | [Dry dates.JPG](https://commons.wikimedia.org/wiki/File:Dry_dates.JPG) — Miansari66 |
 | `dates-ajwa.webp` | Ajwa Dates | Public domain | [Ajwa dates.JPG](https://commons.wikimedia.org/wiki/File:Ajwa_dates.JPG) — Miansari66 |
-| `sesame-seeds-white.webp` | Natural White Sesame Seeds | CC0 | [Yonghui preferred white sesame seeds.jpg](https://commons.wikimedia.org/wiki/File:Yonghui_preferred_white_sesame_seeds.jpg) — Fumikas Sagisavas |
 | `sesame-seeds-hulled.webp` | Hulled Sesame Seeds | Public domain | [Sesame-Seeds.jpg](https://commons.wikimedia.org/wiki/File:Sesame-Seeds.jpg) — "Ies", en.wikipedia |
 | `sesame-seeds-black.webp` | Black Sesame Seeds | CC0 | [BLACK SESAME SEEDS.jpg](https://commons.wikimedia.org/wiki/File:BLACK_SESAME_SEEDS.jpg) — Ranjithkumar Murugesan |
 
@@ -22,7 +21,7 @@ CC BY-SA and **must be credited** if they stay on the live site — the rows are
 
 | File | Used for | Licence | Required credit |
 |---|---|---|---|
-| `khewra-salt-mine.webp` | Himalayan Pink Salt category banner | **CC BY-SA 4.0** | Shahzaib Damn Cruze, [Khewra Salt Mines 03.jpg](https://commons.wikimedia.org/wiki/File:Khewra_Salt_Mines_03.jpg), via Wikimedia Commons, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `sesame-seeds-white.webp` | Natural White Sesame Seeds + Sesame category banner | **CC BY-SA 3.0** | Sanjay Acharya, [Sa white sesame seeds.jpg](https://commons.wikimedia.org/wiki/File:Sa_white_sesame_seeds.jpg), via Wikimedia Commons, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
 | `dates-orchard.webp` | Dates category banner (cropped) | **CC BY-SA 3.0** | Agnieszka Kwiecień (Nova), [Owoce Daktyl.jpg](https://commons.wikimedia.org/wiki/File:Owoce_Daktyl.jpg), via Wikimedia Commons, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
 | `dates-chuara.webp` | Dry Dates (Chuara) (cropped) | **CC BY-SA 3.0** | Agnieszka Kwiecień (Nova), [Owoce Daktyl.jpg](https://commons.wikimedia.org/wiki/File:Owoce_Daktyl.jpg), via Wikimedia Commons, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
 
@@ -33,9 +32,13 @@ and is recommended regardless — see `REBRAND-NOTES.md`.
 
 | File | Notes |
 |---|---|
-| `logo.png` | KhasCom monogram, generated for this project. Own work. |
-| `app/favicon.ico` | Same mark, multi-resolution. |
+| `public/logo.webp` | Supplied by the client. The source of everything below. |
+| `logo-wordmark.webp` | The client logo cropped to its artwork — the original was 85% blank margin. |
+| `logo-mark.webp` | The CK monogram on its own, lifted from the same file. |
+| `app/favicon.ico` | The monogram, multi-resolution. Must stay RGBA or the build fails. |
+| `og-image.jpg` | 1200x630 social share card built around the client logo. |
 | `pink-salt-fine.webp` | Crop of the pre-existing `pink-salt-real.webp` asset. |
+| `pink-salt-banner.webp` | Wide crop of the same, used as the Himalayan Salt page banner. |
 
 ## Pre-existing assets
 
