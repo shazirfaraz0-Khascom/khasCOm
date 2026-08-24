@@ -1,6 +1,17 @@
 import { PrismaClient, ProductScope } from '@prisma/client'
+import { PrismaPg } from '@prisma/adapter-pg'
+import bcrypt from 'bcryptjs'
 
-const prisma = new PrismaClient()
+// Prisma 7 reaches Postgres through a driver adapter; see lib/prisma.ts.
+// Schema changes run over the session connection, not the transaction pooler.
+const connectionString = process.env.DIRECT_URL || process.env.DATABASE_URL
+
+if (!connectionString) {
+  console.error('Set DATABASE_URL (and ideally DIRECT_URL) before seeding.')
+  process.exit(1)
+}
+
+const prisma = new PrismaClient({ adapter: new PrismaPg({ connectionString }) })
 
 async function main() {
   console.log('Starting seed...')
@@ -15,15 +26,25 @@ async function main() {
   await prisma.exportDestination.deleteMany()
   await prisma.user.deleteMany()
   
-  // 1. Create SuperAdmin
-  const admin = await prisma.user.create({
-    data: {
-      name: 'Admin User',
-      email: 'admin@khascom.com',
-      passwordHash: '$2a$10$X7...', // Mock bcrypt hash for 'password'
-      role: 'SuperAdmin'
-    }
-  })
+  // 1. SuperAdmin. Credentials come from the environment so that no password or
+  // hash is ever committed. ADMIN_USERNAME / ADMIN_PASSWORD also work on their
+  // own as a login (see lib/auth.ts), so skipping this row is not fatal.
+  const adminEmail = process.env.ADMIN_USERNAME
+  const adminPassword = process.env.ADMIN_PASSWORD
+
+  if (adminEmail && adminPassword) {
+    await prisma.user.create({
+      data: {
+        name: 'Admin User',
+        email: adminEmail,
+        passwordHash: await bcrypt.hash(adminPassword, 10),
+        role: 'SuperAdmin'
+      }
+    })
+    console.log(`Created SuperAdmin: ${adminEmail}`)
+  } else {
+    console.log('Skipped SuperAdmin row - ADMIN_USERNAME / ADMIN_PASSWORD not set.')
+  }
 
   // 2. Categories
   const categories = [

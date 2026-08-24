@@ -9,17 +9,12 @@ import { Header } from '@/components/layout/Header';
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const session = await getServerSession(authOptions);
 
-  if (!session && process.env.NODE_ENV === 'production') {
-    // In dev, we might allow bypass if db is not setup, but let's enforce it
-    // Wait, since we can't seed DB properly without running it, we might get locked out.
-    // For now, enforce redirect to login.
-  }
-
-  // Temporary bypass for demonstration when db is not running
-  const isAuth = session || process.env.NODE_ENV !== 'production';
-
-  if (!isAuth) {
-    redirect('/api/auth/signin');
+  // Defence in depth. proxy.ts already turns unauthenticated requests away before
+  // this renders; this guard covers the case where that matcher stops matching.
+  // Note it cannot be the only check: a redirect thrown here still ships the
+  // rendered page in the response body. See proxy.ts.
+  if (!session) {
+    redirect('/admin-login');
   }
 
   return (
