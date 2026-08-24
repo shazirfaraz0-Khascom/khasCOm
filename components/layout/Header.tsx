@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronRight, ChevronDown, Leaf, Carrot, ShoppingBag, Wheat, ShoppingBasket, Mountain, TreePalm, Sprout, User, LayoutDashboard, LogOut } from "lucide-react";
 
@@ -24,9 +23,6 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const pathname = usePathname();
-  
-  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,23 +55,17 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
     { name: "Contact", href: "/contact-us" },
   ];
 
-  const headerTransparent = isHomePage && !isScrolled;
-
   return (
+    // Solid #fff, matching the white ground baked into the logo file, so the
+    // lockup sits on the bar with no visible plate behind it.
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        headerTransparent
-          ? "bg-transparent py-2.5"
-          : "bg-white/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.03)] py-1.5 border-b border-gray-100/50"
+      className={`fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-100 py-1.5 transition-shadow duration-300 ${
+        isScrolled ? "shadow-[0_4px_30px_rgba(0,0,0,0.06)]" : "shadow-none"
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link href="/" aria-label="KhasCom home" className="flex items-center z-50 group">
-          <span
-            className={`block rounded-lg transition-all duration-300 group-hover:scale-[1.03] ${
-              headerTransparent ? "bg-white px-3 py-2 shadow-lg" : "px-0 py-0"
-            }`}
-          >
+        <Link href="/" aria-label="KhasCom home" className="flex items-center z-50">
+          <span className="block">
             <Image
               src="/images/logo-wordmark.webp"
               alt="KhasCom"
@@ -100,7 +90,7 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
               <Link
                 href={link.href}
                 className={`text-sm font-medium tracking-wide transition-colors hover:text-[#C8A14A] relative group/link flex items-center gap-1 py-4 ${
-                  headerTransparent ? "text-white/90" : "text-[#1A1A1A]"
+                  "text-[#1A1A1A]"
                 }`}
               >
                 {link.name}
@@ -171,11 +161,7 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
         <div className="hidden lg:flex items-center gap-4">
           <Link
             href="/contact-us/request-import-quote"
-            className={`group inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-300 ${
-              headerTransparent
-                ? "bg-white text-[#14532D] hover:bg-[#C8A14A] hover:text-white"
-                : "bg-[#14532D] text-white hover:bg-[#C8A14A]"
-            } shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(200,161,74,0.3)] hover:-translate-y-0.5`}
+            className="group inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-300 bg-[#14532D] text-white hover:bg-[#C8A14A] shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(200,161,74,0.3)] hover:-translate-y-0.5"
           >
             Request Quote
             <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -183,7 +169,7 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
 
           {isAdmin && (
             <div className="relative group/admin cursor-pointer ml-2">
-              <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${headerTransparent ? "bg-white/20 text-white hover:bg-white/30" : "bg-[#14532D]/10 text-[#14532D] hover:bg-[#14532D]/20"}`}>
+              <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors bg-[#14532D]/10 text-[#14532D] hover:bg-[#14532D]/20`}>
                 <User className="w-5 h-5" />
               </div>
               <div className="absolute right-0 top-full pt-4 opacity-0 invisible group-hover/admin:opacity-100 group-hover/admin:visible transition-all duration-300 z-50">
@@ -213,9 +199,9 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
           aria-label="Toggle Menu"
         >
           {isMobileMenuOpen ? (
-            <X className={`w-6 h-6 ${headerTransparent ? "text-white" : "text-[#1A1A1A]"}`} />
+            <X className="w-6 h-6 text-[#1A1A1A]" />
           ) : (
-            <Menu className={`w-6 h-6 ${headerTransparent ? "text-white" : "text-[#1A1A1A]"}`} />
+            <Menu className="w-6 h-6 text-[#1A1A1A]" />
           )}
         </button>
       </div>
