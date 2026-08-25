@@ -14,6 +14,7 @@ CC BY-SA and **must be credited** if they stay on the live site — the rows are
 | `arvi-taro-root.webp` | Arvi (Taro Root) | CC0 | [Arvi.JPG](https://commons.wikimedia.org/wiki/File:Arvi.JPG) — Miansari66 |
 | `dates-aseel.webp` | Aseel Dates (Khairpur) | Public domain | [Dry dates.JPG](https://commons.wikimedia.org/wiki/File:Dry_dates.JPG) — Miansari66 |
 | `dates-ajwa.webp` | Ajwa Dates | Public domain | [Ajwa dates.JPG](https://commons.wikimedia.org/wiki/File:Ajwa_dates.JPG) — Miansari66 |
+| `dates-orchard.webp` | Dates category banner | CC0 | [Ripe and dry dates fruit bunches.jpg](https://commons.wikimedia.org/wiki/File:Ripe_and_dry_dates_fruit_bunches.jpg) |
 | `sesame-seeds-hulled.webp` | Hulled Sesame Seeds | Public domain | [Sesame-Seeds.jpg](https://commons.wikimedia.org/wiki/File:Sesame-Seeds.jpg) — "Ies", en.wikipedia |
 | `sesame-seeds-black.webp` | Black Sesame Seeds | CC0 | [BLACK SESAME SEEDS.jpg](https://commons.wikimedia.org/wiki/File:BLACK_SESAME_SEEDS.jpg) — Ranjithkumar Murugesan |
 
@@ -22,10 +23,9 @@ CC BY-SA and **must be credited** if they stay on the live site — the rows are
 | File | Used for | Licence | Required credit |
 |---|---|---|---|
 | `sesame-seeds-white.webp` | Natural White Sesame Seeds + Sesame category banner | **CC BY-SA 3.0** | Sanjay Acharya, [Sa white sesame seeds.jpg](https://commons.wikimedia.org/wiki/File:Sa_white_sesame_seeds.jpg), via Wikimedia Commons, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
-| `dates-orchard.webp` | Dates category banner (cropped) | **CC BY-SA 3.0** | Agnieszka Kwiecień (Nova), [Owoce Daktyl.jpg](https://commons.wikimedia.org/wiki/File:Owoce_Daktyl.jpg), via Wikimedia Commons, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
 | `dates-chuara.webp` | Dry Dates (Chuara) (cropped) | **CC BY-SA 3.0** | Agnieszka Kwiecień (Nova), [Owoce Daktyl.jpg](https://commons.wikimedia.org/wiki/File:Owoce_Daktyl.jpg), via Wikimedia Commons, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
 
-Replacing these three with KhasCom's own product photography removes the obligation entirely,
+Replacing these two with KhasCom's own product photography removes the obligation entirely,
 and is recommended regardless — see `REBRAND-NOTES.md`.
 
 ## Created for KhasCom
