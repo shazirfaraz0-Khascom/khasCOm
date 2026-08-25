@@ -56,14 +56,11 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
   ];
 
   return (
-    // White at rest; frosted glass once content starts passing underneath.
-    // The logo is transparent, so it composites onto whichever state is showing
-    // instead of sitting on a plate of its own.
+    // Solid white throughout. A shadow lifts the bar off the page once it starts
+    // to overlap content.
     <header
-      className={`fixed top-0 left-0 w-full z-50 border-b border-gray-100 py-1.5 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
-          : "bg-white shadow-none"
+      className={`fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-100 py-1.5 transition-shadow duration-300 ${
+        isScrolled ? "shadow-[0_4px_30px_rgba(0,0,0,0.06)]" : "shadow-none"
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
