@@ -1,5 +1,5 @@
 "use client";
-// Imports
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -70,10 +70,10 @@ export function ServicesBanner() {
             className="absolute top-[15%] left-[5%] w-52 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-4 shadow-2xl"
           >
             <div className="relative h-32 w-full rounded-xl overflow-hidden mb-3">
-              <Image src="/images/unsplash-1454165804606-c3d57bc86b40.webp" alt="Company Registration" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+              <Image src="/images/unsplash-1550989460-0adf9ea622e2.webp" alt="Sourcing Pakistani commodities" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
             </div>
-            <div className="text-white font-serif font-medium">Registration</div>
-            <div className="text-gray-400 text-xs mt-1">NTN, Chamber, TDAP</div>
+            <div className="text-white font-serif font-medium">Sourcing</div>
+            <div className="text-gray-400 text-xs mt-1">Beyond our portfolio</div>
           </motion.div>
 
           <motion.div 

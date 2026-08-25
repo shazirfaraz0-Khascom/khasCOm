@@ -76,15 +76,11 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#C8A14A] flex-shrink-0 mt-0.5" />
-                <span>[Street address], Gulberg III<br/>Lahore, Punjab, Pakistan</span>
+                <span>29-C, Ittehad Commercial Lane-1<br/>Phase 6, DHA, Karachi - 75500</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#C8A14A] flex-shrink-0" />
-                <span>+92 300 000 0000</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#C8A14A] flex-shrink-0" />
-                <span>export@khascom.com</span>
+                <span>+92 300 8224424</span>
               </li>
             </ul>
             

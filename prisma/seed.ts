@@ -58,7 +58,7 @@ async function main() {
     },
     {
       name: 'Fresh Vegetables', slug: 'fresh-vegetables', order: 2,
-      description: 'Tinda, loki, arvi, onions and potatoes, packed for reefer export.',
+      description: 'Apple gourd, bottle gourd, taro root, onions and potatoes, packed for reefer export.',
       bannerImage: '/images/unsplash-1464226184884-fa280b87c399.webp',
     },
     {
@@ -77,19 +77,19 @@ async function main() {
       bannerImage: '/images/sesame-seeds-white.webp',
     },
     {
-      name: 'Dry Fruits & Nuts', slug: 'dry-fruits', order: 6,
+      name: 'Dry Fruits & Nuts', slug: 'dry-fruits', order: 7,
       description: 'Almonds, walnuts and apricots from the northern orchards.',
       bannerImage: '/images/unsplash-1508061253366-f7da158b6d46.webp',
     },
     {
-      name: 'Grains & Staples', slug: 'grains', order: 7,
+      name: 'Grains & Staples', slug: 'grains', order: 8,
       description: '1121 basmati rice, wheat and daily staples in bulk.',
       bannerImage: '/images/unsplash-1586201375761-83865001e31c.webp',
     },
     {
-      name: 'Spices & Aromatics', slug: 'spices-aromatics', order: 8,
-      description: 'Garlic, ginger and aromatics sourced for international kitchens.',
-      bannerImage: '/images/unsplash-1596040033229-a9821ebd058d.webp',
+      name: 'Spices & Aromatics', slug: 'spices-aromatics', order: 6,
+      description: 'Sun-dried red chilli from Kunri, plus garlic, ginger and aromatics.',
+      bannerImage: '/images/red-dry-chilli.webp',
     },
     {
       name: 'Poultry / Eggs', slug: 'poultry', order: 9,
@@ -143,9 +143,9 @@ async function main() {
     { name: 'Green Peas', slug: 'green-peas', category: 'Fresh Vegetables', countries: ['Pakistan'] },
     { name: 'Bitter Gourd', slug: 'bitter-gourd', category: 'Fresh Vegetables', countries: ['Pakistan'] },
     { name: 'Carrot', slug: 'carrot', category: 'Fresh Vegetables', countries: ['Pakistan'] },
-    { name: 'Tinda (Apple Gourd)', slug: 'tinda-apple-gourd', category: 'Fresh Vegetables', countries: ['Pakistan'] },
-    { name: 'Loki (Bottle Gourd)', slug: 'loki-bottle-gourd', category: 'Fresh Vegetables', countries: ['Pakistan'] },
-    { name: 'Arvi (Taro Root)', slug: 'arvi-taro-root', category: 'Fresh Vegetables', countries: ['Pakistan'] },
+    { name: 'Apple Gourd', slug: 'tinda-apple-gourd', category: 'Fresh Vegetables', countries: ['Pakistan'] },
+    { name: 'Bottle Gourd', slug: 'loki-bottle-gourd', category: 'Fresh Vegetables', countries: ['Pakistan'] },
+    { name: 'Taro Root', slug: 'arvi-taro-root', category: 'Fresh Vegetables', countries: ['Pakistan'] },
     { name: '1121 Basmati Rice', slug: '1121-basmati-rice', category: 'Grains & Staples', countries: ['Pakistan'] },
     { name: 'Premium Wheat', slug: 'premium-wheat', category: 'Grains & Staples', countries: ['Pakistan'] },
     // Himalayan salt (Khewra range, Punjab)
@@ -155,6 +155,8 @@ async function main() {
     { name: 'Aseel Dates', slug: 'aseel-dates', category: 'Dates', countries: ['Pakistan'] },
     { name: 'Ajwa Dates', slug: 'ajwa-dates', category: 'Dates', countries: ['Pakistan'] },
     { name: 'Dry Dates (Chuara)', slug: 'dry-dates-chuara', category: 'Dates', countries: ['Pakistan'] },
+    // Spices
+    { name: 'Red Dry Chilli', slug: 'red-dry-chilli', category: 'Spices & Aromatics', countries: ['Pakistan'] },
     // Sesame and oilseeds
     { name: 'Natural White Sesame Seeds', slug: 'natural-white-sesame-seeds', category: 'Sesame Seeds & Oilseeds', countries: ['Pakistan'] },
     { name: 'Hulled Sesame Seeds', slug: 'hulled-sesame-seeds', category: 'Sesame Seeds & Oilseeds', countries: ['Pakistan'] },

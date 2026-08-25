@@ -55,15 +55,14 @@ export default function ContactUsPage() {
               <div className="space-y-6">
                 <div>
                   <h4 className="font-bold text-stone-900">Head Office</h4>
-                  <p className="text-stone-600 mt-1">[Street address], Gulberg III<br/>Lahore, Punjab, Pakistan</p>
-                  <p className="text-stone-600 mt-1">Phone: +92 300 000 0000</p>
-                  <p className="text-stone-600 mt-1">Email: info@khascom.com</p>
+                  <p className="text-stone-600 mt-1">29-C, Ittehad Commercial Lane-1<br/>Phase 6, DHA, Karachi - 75500</p>
+                  <p className="text-stone-600 mt-1">Phone: <a href="tel:+923008224424" className="hover:text-primary">+92 300 8224424</a></p>
+                  <p className="text-stone-600 mt-1">WhatsApp: <a href="https://wa.me/923008224424" target="_blank" rel="noopener noreferrer" className="hover:text-primary">+92 300 8224424</a></p>
 
                 </div>
                 <div>
                   <h4 className="font-bold text-stone-900">Export Desk</h4>
                   <p className="text-stone-600 mt-1">Karachi Port &amp; Port Qasim operations</p>
-                  <p className="text-stone-600 mt-1">Email: export@khascom.com</p>
                 </div>
               </div>
             </div>

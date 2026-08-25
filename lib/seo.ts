@@ -22,6 +22,9 @@ const DEFAULT_KEYWORDS = [
   'sesame seeds exporter Pakistan',
   'fresh vegetables exporter Pakistan',
   'tinda loki arvi export',
+  'apple gourd bottle gourd taro root exporter',
+  'red dry chilli exporter Pakistan',
+  'Kunri red chilli export',
   'basmati rice exporter',
   'wholesale commodities supplier',
 ];

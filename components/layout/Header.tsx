@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronRight, ChevronDown, Leaf, Carrot, ShoppingBag, Wheat, ShoppingBasket, Mountain, TreePalm, Sprout, User, LayoutDashboard, LogOut } from "lucide-react";
+import { Menu, X, ChevronRight, ChevronDown, Leaf, Carrot, ShoppingBag, Wheat, ShoppingBasket, Mountain, TreePalm, Sprout, Flame, User, LayoutDashboard, LogOut } from "lucide-react";
 
 type MegaMenuItem = {
   name: string;
@@ -41,7 +41,8 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
       href: "/products",
       megaMenu: [
         { name: "Fresh Fruits", href: "/products/fresh-fruits", description: "Mangoes, citrus and seasonal fruits", icon: Leaf },
-        { name: "Fresh Vegetables", href: "/products/fresh-vegetables", description: "Tinda, loki, arvi, onions and potatoes", icon: Carrot },
+        { name: "Fresh Vegetables", href: "/products/fresh-vegetables", description: "Apple gourd, bottle gourd, taro root, onions", icon: Carrot },
+        { name: "Spices & Aromatics", href: "/products/spices-aromatics", description: "Sun-dried red chilli from Kunri, Sindh", icon: Flame },
         { name: "Himalayan Salt", href: "/products/himalayan-salt", description: "Pink rock salt from the Khewra range", icon: Mountain },
         { name: "Dates", href: "/products/dates", description: "Aseel, Ajwa and dry dates in bulk", icon: TreePalm },
         { name: "Sesame & Oilseeds", href: "/products/seeds-oilseeds", description: "Natural, hulled and black sesame seeds", icon: Sprout },

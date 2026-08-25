@@ -501,9 +501,10 @@ function FeaturedProducts() {
     { name: "Himalayan Pink Salt", origin: "Pakistan", moq: "1x20ft Container", href: "/products/himalayan-salt/himalayan-pink-salt-crystals", img: "/images/pink-salt-real.webp" },
     { name: "Aseel Dates", origin: "Pakistan", moq: "1x20ft Container", href: "/products/dates/aseel-dates", img: "/images/dates-aseel.webp" },
     { name: "Natural White Sesame Seeds", origin: "Pakistan", moq: "1x20ft Container", href: "/products/seeds-oilseeds/natural-white-sesame-seeds", img: "/images/sesame-seeds-white.webp" },
-    { name: "Tinda (Apple Gourd)", origin: "Pakistan", moq: "1x40ft Reefer", href: "/products/fresh-vegetables/tinda-apple-gourd", img: "/images/tinda-apple-gourd.webp" },
-    { name: "Loki (Bottle Gourd)", origin: "Pakistan", moq: "1x40ft Reefer", href: "/products/fresh-vegetables/loki-bottle-gourd", img: "/images/loki-bottle-gourd.webp" },
-    { name: "Arvi (Taro Root)", origin: "Pakistan", moq: "1x20ft Container", href: "/products/fresh-vegetables/arvi-taro-root", img: "/images/arvi-taro-root.webp" },
+    { name: "Apple Gourd", origin: "Pakistan", moq: "1x40ft Reefer", href: "/products/fresh-vegetables/tinda-apple-gourd", img: "/images/tinda-apple-gourd.webp" },
+    { name: "Red Dry Chilli", origin: "Pakistan", moq: "1x20ft Container", href: "/products/spices-aromatics/red-dry-chilli", img: "/images/red-dry-chilli.webp" },
+    { name: "Bottle Gourd", origin: "Pakistan", moq: "1x40ft Reefer", href: "/products/fresh-vegetables/loki-bottle-gourd", img: "/images/loki-bottle-gourd.webp" },
+    { name: "Taro Root", origin: "Pakistan", moq: "1x20ft Container", href: "/products/fresh-vegetables/arvi-taro-root", img: "/images/arvi-taro-root.webp" },
     { name: "Chaunsa Mango", origin: "Pakistan", moq: "5 Tons (Air Freight)", href: "/products/fresh-fruits/chaunsa-mango", img: "/images/premium_chaunsa_mango.png" },
     { name: "1121 Basmati Rice", origin: "Pakistan", moq: "1x20ft Container", href: "/products/grains/1121-basmati-rice", img: "/images/unsplash-1586201375761-83865001e31c.webp" },
   ];
@@ -929,7 +930,7 @@ function Testimonials() {
   const reviews = [
     { text: "KhasCom has transformed our supply chain. Their consistency in delivering Grade A Pakistani produce to our European warehouses is unmatched.", author: "Director of Procurement", company: "FreshFoods GmbH, Germany" },
     { text: "Finding a reliable exporter for Himalayan pink salt in bulk was a challenge until we partnered with KhasCom. Flawless documentation and timely shipping.", author: "Sourcing Manager", company: "Natural Goods LLC, USA" },
-    { text: "Their sesame seed purity is consistently on spec, and the cold chain on fresh tinda and loki holds all the way to Dubai. Our preferred Pakistani supplier.", author: "Head Buyer", company: "Global Supermarkets, UAE" }
+    { text: "Their sesame seed purity is consistently on spec, and the cold chain on fresh gourds holds all the way to Dubai. Our preferred Pakistani supplier.", author: "Head Buyer", company: "Global Supermarkets, UAE" }
   ];
 
   return (

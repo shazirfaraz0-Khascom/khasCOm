@@ -15,6 +15,7 @@ CC BY-SA and **must be credited** if they stay on the live site — the rows are
 | `dates-aseel.webp` | Aseel Dates (Khairpur) | Public domain | [Dry dates.JPG](https://commons.wikimedia.org/wiki/File:Dry_dates.JPG) — Miansari66 |
 | `dates-ajwa.webp` | Ajwa Dates | Public domain | [Ajwa dates.JPG](https://commons.wikimedia.org/wiki/File:Ajwa_dates.JPG) — Miansari66 |
 | `dates-orchard.webp` | Dates category banner | CC0 | [Ripe and dry dates fruit bunches.jpg](https://commons.wikimedia.org/wiki/File:Ripe_and_dry_dates_fruit_bunches.jpg) |
+| `red-dry-chilli.webp` | Red Dry Chilli | Public domain | [Capsicum annuum (Guajillo) - dried.jpg](https://commons.wikimedia.org/wiki/File:Capsicum_annuum_(Guajillo)_-_dried.jpg) |
 | `sesame-seeds-hulled.webp` | Hulled Sesame Seeds | Public domain | [Sesame-Seeds.jpg](https://commons.wikimedia.org/wiki/File:Sesame-Seeds.jpg) — "Ies", en.wikipedia |
 | `sesame-seeds-black.webp` | Black Sesame Seeds | CC0 | [BLACK SESAME SEEDS.jpg](https://commons.wikimedia.org/wiki/File:BLACK_SESAME_SEEDS.jpg) — Ranjithkumar Murugesan |
 

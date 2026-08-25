@@ -25,7 +25,7 @@ export const CATEGORY_DATA = {
   },
   "fresh-vegetables": {
     name: "Fresh Vegetables",
-    description: "Farm-fresh Pakistani vegetables \u2014 including tinda, loki and arvi \u2014 sorted and packed under strict quality controls.",
+    description: "Farm-fresh Pakistani vegetables \u2014 apple gourd, bottle gourd, taro root, onions and potatoes \u2014 sorted and packed under strict quality controls.",
     image: "/images/unsplash-1464226184884-fa280b87c399.webp",
     stats: [
       { n: "20+", l: "Types" },
@@ -36,9 +36,9 @@ export const CATEGORY_DATA = {
     products: [
       { id: 4, slug: "red-onions", name: "Red Onions", origin: "Pakistan", minOrder: "1x40ft Reefer", img: "/images/unsplash-1618512496248-a07fe83aa8cb.webp" },
       { id: 5, slug: "premium-potatoes", name: "Premium Potatoes", origin: "Pakistan", minOrder: "1x20ft Container", img: "/images/unsplash-1518977676601-b53f82aba655.webp" },
-      { id: 13, slug: "tinda-apple-gourd", name: "Tinda (Apple Gourd)", origin: "Pakistan", minOrder: "1x40ft Reefer", img: "/images/tinda-apple-gourd.webp" },
-      { id: 14, slug: "loki-bottle-gourd", name: "Loki (Bottle Gourd)", origin: "Pakistan", minOrder: "1x40ft Reefer", img: "/images/loki-bottle-gourd.webp" },
-      { id: 15, slug: "arvi-taro-root", name: "Arvi (Taro Root)", origin: "Pakistan", minOrder: "1x20ft Container", img: "/images/arvi-taro-root.webp" },
+      { id: 13, slug: "tinda-apple-gourd", name: "Apple Gourd", origin: "Pakistan", minOrder: "1x40ft Reefer", img: "/images/tinda-apple-gourd.webp" },
+      { id: 14, slug: "loki-bottle-gourd", name: "Bottle Gourd", origin: "Pakistan", minOrder: "1x40ft Reefer", img: "/images/loki-bottle-gourd.webp" },
+      { id: 15, slug: "arvi-taro-root", name: "Taro Root", origin: "Pakistan", minOrder: "1x20ft Container", img: "/images/arvi-taro-root.webp" },
     ]
   },
   "himalayan-salt": {
@@ -86,6 +86,20 @@ export const CATEGORY_DATA = {
       { id: 21, slug: "natural-white-sesame-seeds", name: "Natural White Sesame Seeds", origin: "Pakistan", minOrder: "1x20ft Container (18 MT)", img: "/images/sesame-seeds-white.webp" },
       { id: 22, slug: "hulled-sesame-seeds", name: "Hulled Sesame Seeds", origin: "Pakistan", minOrder: "1x20ft Container (18 MT)", img: "/images/sesame-seeds-hulled.webp" },
       { id: 23, slug: "black-sesame-seeds", name: "Black Sesame Seeds", origin: "Pakistan", minOrder: "10 Tons", img: "/images/sesame-seeds-black.webp" },
+    ]
+  },
+  "spices-aromatics": {
+    name: "Spices & Aromatics",
+    description: "Sun-dried Pakistani red chilli and aromatics, cleaned and graded to buyer colour and pungency specifications.",
+    image: "/images/unsplash-1596040033229-a9821ebd058d.webp",
+    stats: [
+      { n: "3", l: "Grades" },
+      { n: "8\u201312%", l: "Moisture" },
+      { n: "12MT", l: "Per 20ft Container" },
+      { n: "A", l: "Export Grade" },
+    ],
+    products: [
+      { id: 24, slug: "red-dry-chilli", name: "Red Dry Chilli", origin: "Pakistan (Kunri, Sindh)", minOrder: "1x20ft Container (12\u201314 MT)", img: "/images/red-dry-chilli.webp" },
     ]
   },
   "dry-fruits": {

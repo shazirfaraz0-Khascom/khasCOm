@@ -1,6 +1,6 @@
 import { constructMetadata } from '@/lib/seo';
 import Link from 'next/link';
-import { Building2, Users, PackageCheck, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Users, PackageCheck, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { ServicesBanner } from '@/components/services/ServicesBanner';
 
 export const metadata = constructMetadata({
@@ -12,32 +12,16 @@ export const metadata = constructMetadata({
 export default function ServicesPage() {
   const services = [
     {
-      id: 'company-registration',
-      title: 'Company Registration',
-      icon: Building2,
-      desc: 'We register your import/export company in Pakistan from start to finish - NTN, Chamber of Commerce, TDAP, RECP, WEBOC registration.',
-      details: 'Navigating government registrations can be complex. Our team handles all the paperwork, timelines, and compliance requirements so you can focus on growing your business.',
-      features: [
-        'NTN & STRN registration',
-        'Chamber of Commerce membership',
-        'TDAP registration',
-        'RECP licensing',
-        'WEBOC portal setup',
-      ],
-      link: '/contact-us',
-      linkText: 'Get Started'
-    },
-    {
       id: 'buyer-matchmaking',
       title: 'Buyer Matchmaking',
       icon: Users,
-      desc: 'We connect international buyers with verified suppliers for premium agro commodities.',
-      details: 'Access our extensive network of verified suppliers. We handle negotiations, quality verification, and export documentation to ensure flawless delivery to your port.',
+      desc: 'We connect international buyers with verified Pakistani suppliers across commodities, grains, and agricultural products.',
+      details: "If you're looking to source a product from Pakistan that isn't in our standard portfolio, our sourcing team will find the right producer, negotiate on your behalf, and manage the full export process.",
       features: [
-        'Verified supplier network',
-        'Quality-checked products',
-        'Price negotiation support',
-        'End-to-end logistics',
+        'Verified Pakistani supplier network',
+        'Sourcing beyond our standard portfolio',
+        'Negotiation handled on your behalf',
+        'Full export process managed end to end',
         'FOB & CIF delivery',
       ],
       link: '/contact-us/request-import-quote',

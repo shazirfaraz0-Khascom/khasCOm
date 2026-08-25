@@ -3,7 +3,7 @@ import Link from 'next/link';
 export function FloatingWhatsApp() {
   return (
     <Link
-      href="https://wa.me/920000000000"
+      href="https://wa.me/923008224424"
       target="_blank"
       rel="noopener noreferrer"
       className="group fixed bottom-6 right-6 z-50 flex items-center justify-center"

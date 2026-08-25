@@ -90,7 +90,7 @@ export default function SupplierForm() {
                   type="text"
                   id="productsOffered"
                   name="productsOffered"
-                  placeholder="e.g. Aseel dates, white sesame seeds, tinda"
+                  placeholder="e.g. Aseel dates, white sesame seeds, red dry chilli"
                   className={field}
                 />
               </div>
