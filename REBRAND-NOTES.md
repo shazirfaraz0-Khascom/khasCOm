@@ -33,8 +33,10 @@ was Dubai-based. Swap in whatever the real registered office is.
 - **Statistics were left as the original site had them** — "15+ Years Experience", "35+ Countries",
   "200+ Products", "1000+ Containers Exported", "99% Quality Inspection Pass Rate". These were
   inherited, not verified. Check them against reality.
-- **Testimonials and blog article titles are still fictional**, as they were on the original site.
-  They now name KhasCom, which makes them read as real client quotes. Replace or remove them.
+- **The testimonials section has been removed.** Its three quotes were fictional, carried over
+  from the original site, and once they named KhasCom they read as real client endorsements.
+- **Blog article titles on the homepage are still fictional** and link to nothing. Supply real
+  posts or drop the section.
 
 ## What changed
 
